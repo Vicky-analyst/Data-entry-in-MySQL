@@ -7,7 +7,7 @@
 
 This is a built project from scratch which contain student info enclose in a student database in mysql. The integration of these MySQL Features demonstrated a commitment to the creation of a well organized and secure database system for managing student academics, it contain detailed code in tracking student academics , entering student info and quick code to Update student information
 
-**_Disclaimer_** -> _This dataset does not represent or gotton from any school, it is a dummy dataset and fabricated for the purpose of learning_
+**_Disclaimer_** -> _This dataset does not represent or gotten from any school, it is a dummy dataset and fabricated for the purpose of learning_
 
 ### Tools and Skills Demonstrated
 
