@@ -76,4 +76,6 @@ create procedure update_stu_grade(in student_id int, in
  end;
 ```
 **To interact with the code here
-- [MySQL](
+- [MySQL](Data_entry_in_mysql.sql)
+
+  
