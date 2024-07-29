@@ -23,8 +23,25 @@ This is a built project from scratch which contain student info enclose in a stu
 - Store procedure
 
 ### Triggers
-the Triggers created in this projecrt is used to track Student academics in real time, evaluate student grade by placing the poorly performed Grade in another table
+the Triggers created in this projecrt is used to track Student academics in real time, evaluate student grade and placing the poorly performed Grade in another table
 
-Code use to track student academics
+Code use to track student academics in real time
+
 ```sql
+create trigger Stu_grades
+ before insert on student_term_grade
+ for each row
+ begin
+ if new.Grade <= 49 then 
+ set new.Grade  = "Fail";
+ elseif new.Grade <= 59 then 
+ set new.grade = "D";
+ elseif new.Grade <= 69 then 
+ set new.Grade = "C";
+ elseif new.Grade <= 79 then 
+ set new.Grade = "B";
+ elseif new.Grade > 79 then 
+ set new.Grade = "A";
+ end if ;
 
+Code use to evaluate student grade and placing the poorly performed Grade in another table
