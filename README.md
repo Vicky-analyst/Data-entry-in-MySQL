@@ -5,7 +5,7 @@
 ### Project Review
 ---
 
-This is a built project from scratch which contain student info enclose in a student database in mysql. The integration of these MySQL Features demonstrated a cpommitment to the creation of a well organized and secure database system for managing student academics, it contain detailed code in tracking student academics , entering student info and quick code to Update student information
+This is a built project from scratch which contain student info enclose in a student database in mysql. The integration of these MySQL Features demonstrated a commitment to the creation of a well organized and secure database system for managing student academics, it contain detailed code in tracking student academics , entering student info and quick code to Update student information
 
 **_Disclaimer_** -> _This dataset does not represent or gotton from any school, it is adummy dataset and fabricated for the purpose of learning_
 
@@ -45,3 +45,19 @@ create trigger Stu_grades
  end if ;
 
 Code use to evaluate student grade and placing the poorly performed Grade in another table
+
+```sql
+create trigger failed_student
+ after insert on student_term_grade
+ for each row
+ begin
+ if new.Grade = "fail" then
+ insert into student_fail (Stu_Id, department, Grade)
+ values(new.stu_id, new.department, new.Grade);
+ end if ;
+
+### Store Procedure
+
+The Store Procedure designed in this project is for updating Student Grade Info, which offer a streamlined and consistent approach to data management during mistake input of values or null values
+
+Code used update student grade info
