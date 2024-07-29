@@ -1,6 +1,6 @@
 # Data Entry in MySQL
 ## Student Database
-![](mysql_picture.jpg)
+![](mysql_pic.jpg)
 
 ### Project Review
 ---
