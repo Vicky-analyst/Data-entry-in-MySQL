@@ -75,7 +75,18 @@ create procedure update_stu_grade(in student_id int, in
  where Stu_Id = student_id;
  end;
 ```
-**To interact with the code here
+**To interact with the code here**
 - [MySQL](Data_entry_in_mysql.sql)
 
-  
+### Limitation
+
+- The Store Procedure update code are not influenced by Trigger especially when the Update has to be effective on the Trigger being created
+- If two columns are measures and the corresonding column is the calculated field(column) of the both columns, the calculated column does not change in respond to the update of the measure columnns
+
+### Conclusion
+
+The trigger was created to serve as a pivotal role in tracking and maintaining the integrity of the Student academics records by automatically capuring changes in academic performance. This real time tracking capabilities enhance data accuracy and provide a historical record of academic progress ehich can be invaluable for generating report.
+The Store Procedure designed for updating student info, provide a well organized and consistent approach to data management by centralizing the logic for updating student records within a single call. this achieve several key benefit
+- Consistency -> Ensure that update to student record are applied uniformly, reducing the risk of errors
+- Efficiency -> Simplifies the update process by calling the procedure which makes it easier to execute update across multiple record with a simple command
+
