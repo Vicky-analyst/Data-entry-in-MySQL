@@ -24,3 +24,7 @@ This is a built project from scratch which contain student info enclose in a stu
 
 ### Triggers
 the Triggers created in this projecrt is used to track Student academics in real time, evaluate student grade by placing the poorly performed Grade in another table
+
+Code use to track student academics
+```sql
+
