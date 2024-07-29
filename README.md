@@ -75,7 +75,7 @@ create procedure update_stu_grade(in student_id int, in
  where Stu_Id = student_id;
  end;
 ```
-**To interact with the code here**
+**To interact with the code click here**
 - [MySQL](Data_entry_in_mysql.sql)
 
 ### Limitation
