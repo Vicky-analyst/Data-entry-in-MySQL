@@ -33,15 +33,15 @@ create trigger Stu_grades
  for each row
  begin
  if new.Grade <= 49 then 
- set new.Grade  = "Fail";
+ set new.Grade  = "Fail"
  elseif new.Grade <= 59 then 
- set new.grade = "D";
+ set new.grade = "D"
  elseif new.Grade <= 69 then 
- set new.Grade = "C";
+ set new.Grade = "C"
  elseif new.Grade <= 79 then 
- set new.Grade = "B";
+ set new.Grade = "B"
  elseif new.Grade > 79 then 
- set new.Grade = "A";
+ set new.Grade = "A"
  end if ;
 ```
 
@@ -54,7 +54,7 @@ create trigger failed_student
  begin
  if new.Grade = "fail" then
  insert into student_fail (Stu_Id, department, Grade)
- values(new.stu_id, new.department, new.Grade);
+ values(new.stu_id, new.department, new.Grade)
  end if ;
 ```
 
